@@ -6,8 +6,9 @@ clone and run the project
 
 use this link to view the patient database
 
-```http://localhost:4040/h2/login.jsp?jsessionid=933453a7df19757e01f2d3dc20beba3f```
-details
+```http://localhost:4040/h2```
+<p>details</p> 
+
 ``jdbcurl = jdbc:h2:mem:hospitaldb;``
 ``username: sa``
 ``password: sa``
