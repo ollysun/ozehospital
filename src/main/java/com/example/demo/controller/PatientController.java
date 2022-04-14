@@ -53,9 +53,9 @@ public class PatientController {
     public ResponseEntity<String> deletePatient(@RequestParam("staffUuid") @NotNull(message ="end date cannot be null") UUID staffUuid,
                                          @RequestParam("from") @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
                                          @NotNull(message = "from date cannot be null") String fromDate,
-                                         @RequestParam("end") @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-                                                    @NotNull(message ="end date cannot be null") String endDate) throws ParseException {
-        patientService.deleteMultipleProfileByDate(staffUuid, fromDate,endDate);
+                                         @RequestParam("to") @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+                                                    @NotNull(message ="end date cannot be null") String toDate) {
+        patientService.deleteMultipleProfileByDate(staffUuid, fromDate,toDate);
         return new ResponseEntity<>("Successful deletion ", HttpStatus.OK);
 
     }

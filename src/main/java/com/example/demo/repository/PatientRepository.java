@@ -12,7 +12,7 @@ import java.sql.Date;
 public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
     @Transactional
-    @Query(value = "SELECT * FROM Patient t WHERE DATEDIFF(year,t.last_visit_date,CURRENT_DATE) = 2", nativeQuery = true)
+    @Query(value = "SELECT * FROM Patient t WHERE DATEDIFF(year,t.last_visit_date,CURRENT_DATE) <= 2", nativeQuery = true)
     List<Patient> findPatientWithTwoYearRegistration();
 
     List<Patient> findByLastVisitDateBetween(LocalDate startDate, LocalDate endDate);
