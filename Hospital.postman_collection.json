@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"mikestand\",\n    \"registerDate\":\"2011-09-07\"\n}",
+					"raw": "{\n    \"name\":\"mikestand2\",\n    \"registerDate\":\"2011-09-07\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -150,6 +150,26 @@
 							"key": "to",
 							"value": "2019-08-07"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Staff",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/api/staff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"staff"
 					]
 				}
 			},
