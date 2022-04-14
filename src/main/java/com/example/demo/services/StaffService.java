@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
@@ -49,6 +50,10 @@ public class StaffService {
         staff.setUpdatedDate(LocalDate.now());
 
         return staff;
+    }
+
+    public List<Staff> getAllStaff(){
+        return staffRepository.findAll();
     }
 
 }

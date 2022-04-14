@@ -14,6 +14,7 @@ use this link to view the patient database
 ``password: sa``
 
 The following are the list of Endpoints available on the postman collection.
+`` Get All Staff: ``
 
 ``Create Staff:  http://localhost:4040/api/staff``
 ```

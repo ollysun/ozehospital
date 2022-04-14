@@ -10,12 +10,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/staff")
 @RequiredArgsConstructor
 public class StaffController {
     private final StaffService staffService;
+
+    @GetMapping
+    public ResponseEntity<List<Staff>> getAllStaff() {
+        return new ResponseEntity<>(staffService.getAllStaff(), HttpStatus.CREATED);
+    }
 
     @PostMapping
     public ResponseEntity<Staff> createStaff(@RequestBody @Valid StaffRequest staffRequest) {
