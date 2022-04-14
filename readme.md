@@ -50,7 +50,7 @@ value1: staff UUID,  value2: patient id to dwonload
 ```
 ```
 Note : generate the csv , it is good to run the endpoint on browser. 
-Postman cannot csv file 
+Postman cannot create csv file 
 ```
 
 `` Delete multiple Profile between a date range ``
